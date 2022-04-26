@@ -1,1 +1,1 @@
-# CRat but with factories
+Same situation as with vanilla project "CRat"
