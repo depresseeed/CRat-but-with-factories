@@ -10,11 +10,12 @@ public:
     CRat1(const CRat& other_one) : CRat(other_one) {};
     void output();
 
-    friend const CRat1 operator+ (const CRat1& left, const CRat1& right);
-    friend const CRat1 operator- (const CRat1& left, const CRat1& right);
-    friend const fr operator*(const CRat1& left, const CRat1& right);
+    //friend const CRat1 operator+ (const CRat1& left, const CRat1& right);
+    //friend const CRat1 operator- (const CRat1& left, const CRat1& right);
+    //friend const fr operator*(const CRat1& left, const CRat1& right);
     friend void do_normal(fr*, int);
-    CRat1& operator=(const CRat1& oke);
+
+    using CRat:: operator=;
     ~CRat1();
 };
 

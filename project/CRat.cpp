@@ -43,7 +43,21 @@ CRat::CRat(const CRat& old_one) {
 		vec[i].p = old_one.item(i).p;
 		vec[i].q = old_one.item(i).q;
 	}
-	outfile = old_one.outfile_name();
+	outfile = old_one.outfile_name(); 
+}
+
+CRat& CRat::operator=(const CRat& oke) {
+	delete[] vec;
+	size = oke.get_size();
+	if (size == 0) vec = NULL;
+	else {
+		vec = new fr[size];
+		for (int i = 0; i < size; i++) {
+			vec[i].p = oke.item(i).p;
+			vec[i].q = oke.item(i).q;
+		}
+	}
+	return *this;
 }
 
 fr CRat::item(int i) const{

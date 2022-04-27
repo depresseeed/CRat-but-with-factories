@@ -32,10 +32,9 @@ int main(void) {
 		return 1000;
 	}
 
-
+	fr* buff;
 	int len;
 	string I;
-	fr* buff = (fr*)malloc(4);
 	const string infile_name = "1.txt";
 	string line;
 	string outfile;
@@ -64,7 +63,7 @@ int main(void) {
 		infile >> I;
 		infile >> outfile;
 		infile >> len;
-		if ((buff = (fr*)realloc(buff, sizeof(fr) * len)) == NULL) { perror("Realoc"); return 993; }
+		buff = (fr*)malloc(sizeof(fr) * len);
 
 		for (int i = 0; i < len; i++) {
 			infile >> buff[i].p;
@@ -77,6 +76,7 @@ int main(void) {
 			return 986;
 		}
 		arr.push_back(Maker->second->create(len, buff, outfile));
+		free(buff);
 
 	}
 	

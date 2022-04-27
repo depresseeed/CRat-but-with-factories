@@ -75,21 +75,21 @@ const fr operator*(const CRat0& left, const CRat0& right) {
 
 }
 
-CRat0& CRat0::operator=(const CRat0& oke) {
-	//delete[] vec;
-	size = oke.get_size();
-	if (size == 0) vec = NULL;
-	else {
-
-		vec = new fr[size];
-		for (int i = 0; i < size; i++) {
-			vec[i].q = oke.item(i).q;
-			vec[i].p = oke.item(i).p;
-			
-		}
-	}
-	return *this;
-}
+//CRat0& CRat0::operator=(const CRat0& oke) {
+//	//delete[] vec;
+//	size = oke.get_size();
+//	if (size == 0) vec = NULL;
+//	else {
+//
+//		vec = new fr[size];
+//		for (int i = 0; i < size; i++) {
+//			vec[i].q = oke.item(i).q;
+//			vec[i].p = oke.item(i).p;
+//			
+//		}
+//	}
+//	return *this;
+//}
 
 
 
