@@ -55,8 +55,8 @@ int main(void) {
 
 
 	map<string, Factory*> FMap;
-	FMap["0"] = new Factory_0;
-	FMap["1"] = new Factory_1;
+	FMap["hori"] = new Factory_0;
+	FMap["vert"] = new Factory_1;
 
 	while (!infile.eof())
 	{
@@ -84,7 +84,13 @@ int main(void) {
 		arr[i]->output();
 	}
 
+
 	infile.close();
+
+	for (int i = 0; i < arr.size(); i++)
+		delete[] arr[i];
+
+	
 
 	return 0;
 }
